@@ -76,7 +76,7 @@ function get_constant_trace_dense(n::Int64,m::Int64,l::Int64,lmon_g::Vector{UInt
 
 
     @fastmath @inbounds @simd for i in 1:m
-        p[i]=@variable(model, [1:sk_g[i]], lower_bound=1)
+        @variable(model, p[i][1:sk_g[i]], lower_bound=1)
         @fastmath @inbounds @simd for j in 1:sk_g[i]
             @fastmath @inbounds @simd for r in 1:lmon_g[i]
                 add_to_expression!(cons[bfind(V,lV,2*v[:,j]+supp_g[i][:,r],n)],p[i][j]*coe_g[i][r])
@@ -87,7 +87,7 @@ function get_constant_trace_dense(n::Int64,m::Int64,l::Int64,lmon_g::Vector{UInt
     if use_eqcons_to_get_constant_trace
         q=Vector{Vector{VariableRef}}(undef, l)
         @fastmath @inbounds @simd for i in 1:l
-            q[i]=@variable(model, [1:s2k_h[i]])
+            @variable(model, q[i][1:s2k_h[i]])
             @fastmath @inbounds @simd for j in 1:s2k_h[i]
                 @fastmath @inbounds @simd for r in 1:lmon_h[i]
                     add_to_expression!(cons[bfind(V,lV,v[:,j]+supp_h[i][:,r],n)],q[i][j]*coe_h[i][r])

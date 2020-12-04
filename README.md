@@ -1,5 +1,5 @@
 # ctpPOP2
-- ctpPOP2 is the Windows version for [ctpPOP](https://github.com/maihoanganh/ctpPOP) to solve polynomial optimization problem (POP):
+- ctpPOP2 is a Windows version for [ctpPOP](https://github.com/maihoanganh/ctpPOP) to solve polynomial optimization problem (POP):
 
 **inf_{x in R^n} { f(x) : gi(x) = 0, hj(x) = 0 },**
 
