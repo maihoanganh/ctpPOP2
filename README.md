@@ -67,7 +67,7 @@ k=2 # relaxation order
 using ctpPOP2
 
 # get information from the input data f,gi,hj
-n,m,l,lmon_g,supp_g,coe_g,lmon_h,supp_h,coe_h,lmon_f,supp_f,coe_f,dg,dh=ctpPOP.get_info(x,f,g,h,sparse=false);
+n,m,l,lmon_g,supp_g,coe_g,lmon_h,supp_h,coe_h,lmon_f,supp_f,coe_f,dg,dh=ctpPOP2.get_info(x,f,g,h,sparse=false);
 
 # get the optimal value of the Moment-SOS relaxation of order k
 opt_val=ctpPOP2.POP_dense_CGAL(  n, # the number of variables
