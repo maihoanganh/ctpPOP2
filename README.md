@@ -42,7 +42,7 @@ Pkg> add https://github.com/tweisser/PolyPowerModels.git
 # Installation
 - To use ctpPOP in Julia, run
 ```ruby
-Pkg> add https://github.com/maihoanganh/ctpPOP.git
+Pkg> add https://github.com/maihoanganh/ctpPOP2.git
 ```
 
 # Remark
